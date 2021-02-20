@@ -1,0 +1,12 @@
+proxies:
+  - name: Shadowsocks
+    type: socks5
+    server: server
+    port: 1080
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - Shadowsocks
+rules:
+  - "MATCH,DIRECT"
